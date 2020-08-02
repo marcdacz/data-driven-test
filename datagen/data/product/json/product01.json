@@ -1,0 +1,33 @@
+{
+  "@context": "http://schema.org",
+  "@type": "Product",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "3.5",
+    "reviewCount": "11"
+  },
+  "description": "The Apple 16” MacBook Pro elevates the notebook to a whole new level of performance and portability. Wherever your ideas take you, you’ll get there faster than ever with high-performance processors, advanced graphics and more.",
+  "name": "Apple Macbook Pro 16\" 2020",
+  "image": "kenmore-microwave-17in.jpg",
+  "offers": {
+    "@type": "Offer",
+    "availability": "http://schema.org/InStock",
+    "price": "55.00",
+    "priceCurrency": "USD"
+  },
+  "reviews": [
+    {
+      "@type": "Review",
+      "author": "Ellie",
+      "datePublished": "2011-04-01",
+      "description": "The lamp burned out and now I have to replace it.",
+      "name": "Not a happy camper",
+      "reviewRating": {
+        "@type": "Rating",
+        "bestRating": "5",
+        "ratingValue": "1",
+        "worstRating": "1"
+      }
+    }
+  ]
+}

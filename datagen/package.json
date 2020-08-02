@@ -1,0 +1,12 @@
+{
+  "name": "datagen",
+  "version": "1.0.0",
+  "description": "NodeJS Test Data Generator",
+  "author": "Marc Dacanay",
+  "scripts": {
+    "start": "node index"
+  },
+  "dependencies": {
+    "superagent": "^5.3.1"
+  }
+}
