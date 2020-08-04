@@ -1,18 +1,19 @@
 {
   "@context": "http://schema.org",
   "@type": "Product",
+  "productId": "product02",
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "3.5",
     "reviewCount": "11"
   },
-  "description": "The Apple 16” MacBook Pro elevates the notebook to a whole new level of performance and portability. Wherever your ideas take you, you’ll get there faster than ever with high-performance processors, advanced graphics and more.",
-  "name": "Apple Macbook Pro 16\" 2020",
+  "description": "The Google Pixelbook 12.3\" Touchscreen Chromebook has a super-thin and lightweight design.",
+  "name": "Google Pixelbook",
   "image": "kenmore-microwave-17in.jpg",
   "offers": {
     "@type": "Offer",
     "availability": "http://schema.org/InStock",
-    "price": "55.00",
+    "price": "4000.00",
     "priceCurrency": "USD"
   },
   "reviews": [

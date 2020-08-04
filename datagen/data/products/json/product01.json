@@ -1,18 +1,19 @@
 {
   "@context": "http://schema.org",
   "@type": "Product",
+  "productId": "product01",
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "3.5",
     "reviewCount": "11"
   },
-  "description": "0.7 cubic feet countertop microwave. Has six preset cooking categories and convenience features like Add-A-Minute and Child Lock.",
-  "name": "Kenmore White 17\" Microwave",
+  "description": "The Apple 16” MacBook Pro elevates the notebook to a whole new level of performance and portability. Wherever your ideas take you, you’ll get there faster than ever with high-performance processors, advanced graphics and more.",
+  "name": "Apple Macbook Pro 16\" 2020",
   "image": "kenmore-microwave-17in.jpg",
   "offers": {
     "@type": "Offer",
     "availability": "http://schema.org/InStock",
-    "price": "55.00",
+    "price": "3500.00",
     "priceCurrency": "USD"
   },
   "reviews": [

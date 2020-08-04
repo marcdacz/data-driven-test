@@ -1,0 +1,18 @@
+{
+  "@context": "http://schema.org",
+  "@type": "Person",
+  "customerId": "d08f6840-aa25-49a2-a911-7261afaa186b",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Manor Lakes",
+    "addressRegion": "VIC",
+    "postalCode": "3024",
+    "streetAddress": "1010 Something Street"
+  },
+  "email": "mailto:jane-doe@xyz.edu",
+  "image": "janedoe.jpg",
+  "title": "Ms.",
+  "firstname": "Jane",
+  "lastname": "Doe",
+  "mobile": "(425) 123-4567"
+}

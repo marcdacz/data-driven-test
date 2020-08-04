@@ -1,0 +1,24 @@
+{
+  "@context": "http://schema.org/",
+  "@type": "Order",
+  "seller": {
+    "@type": "Organization",
+    "name": "ACME Supplies"
+  },
+  "customer": {
+    "@type": "Person",
+    "customerId": "xyz001"
+  },
+  "orderedItem": [
+    {
+      "@type": "OrderItem",
+      "productId": "abc123",
+      "orderQuantity": 1,
+      "orderItemStatus": "pending",
+      "orderDelivery": {
+        "@type": "ParcelDelivery",
+        "expectedArrivalFrom": "2021-03-10"
+      }
+    }
+  ]
+}

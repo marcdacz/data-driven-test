@@ -9,7 +9,7 @@ const getBaseJson = (filename) => {
   return require(filename);
 };
 
-const copyObject = (dataOj) => {
+const copyObject = (dataObj) => {
   return JSON.parse(JSON.stringify(dataObj));
 };
 
@@ -32,5 +32,6 @@ const uploadTestData = async (data, filename) => {
 module.exports = {
   writeJson,
   getBaseJson,
+  copyObject,
   uploadTestData,
 };

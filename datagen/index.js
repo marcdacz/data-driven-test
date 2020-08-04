@@ -2,10 +2,12 @@ const fs = require("fs");
 const utils = require("./utils");
 
 const generateTestData = async (foldername) => {
+  console.log("\nGenerating:", foldername);
   let files = fs.readdirSync(`./data/${foldername}`);
 
   for (const filename of files) {
     if (filename.endsWith(".js")) {
+      console.log(filename);
       let filedata = require(`./data/${foldername}/${filename}`);
 
       utils.writeJson(
@@ -21,8 +23,9 @@ const generateTestData = async (foldername) => {
 };
 
 const generateAllData = async () => {
-  // await generateTestData("customer");
-  await generateTestData("product");
+  await generateTestData("customers");
+  await generateTestData("products");
+  await generateTestData("orders");
 };
 
 generateAllData();
