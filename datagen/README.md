@@ -63,3 +63,11 @@ const generateTestData = async (foldername) => {
   }
 };
 ```
+
+## Set up and Execution
+
+```
+npm install
+
+npm start
+```
