@@ -1,6 +1,7 @@
 service: data-driven-stubs
 
 plugins:
+  - serverless-aws-documentation
   - serverless-offline
   - serverless-webpack
 
@@ -29,4 +30,21 @@ functions:
       - http:
           path: /utils/artefacts
           method: get
+          documentation: 
+            summary: "Get Test Artefacts"
+            description: "Get Test Artefacts"
+            queryParams:
+              - name: "filename"
+                description: "Test Artefact's Filename"
+
+  utils-upload-artefacts:
+    handler: functions/artefacts.uploadTestArtefacts
+    events:
+      - http:
+          path: /utils/artefacts
+          method: post
+          documentation: 
+            summary: "Upload Test Artefacts"
+            description: "Upload Test Artefacts"
+          
 
