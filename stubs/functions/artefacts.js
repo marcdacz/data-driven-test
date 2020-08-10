@@ -47,7 +47,7 @@ exports.getTestArtefacts = async (event) => {
 exports.uploadTestArtefacts = async (event) => {
 	let response;
 	try {
-		let artefact = utils.getBodyFromEvent(event.body);
+		let artefact = utils.getBodyFromEvent(event);
 		console.log('exports.uploadTestArtefacts -> artefact', artefact);
 		let parsedArtefact = JSON.parse(artefact);
 		console.log('exports.uploadTestArtefacts -> parsedArtefact', parsedArtefact);

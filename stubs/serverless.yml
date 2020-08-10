@@ -46,5 +46,18 @@ functions:
           documentation: 
             summary: "Upload Test Artefacts"
             description: "Upload Test Artefacts"
+
+  stubs-get-customer:
+    handler: functions/customers.getCustomer
+    events:
+      - http:
+          path: /stubs/customers/{customerId}
+          method: get
+          documentation: 
+            summary: "Get Customer By Id"
+            description: "Get Customer By Id"
+            queryParams:
+              - name: "customerId"
+                description: "Customer Id"
           
 
