@@ -11,11 +11,27 @@ const getTestArtefactFromS3 = async (filename) => {
 		Bucket: bucketName,
 		Key: filename
 	};
+	console.log('params', params);
 	const artefact = await s3.getObject(params).promise();
 	return JSON.parse(artefact.Body.toString('utf-8'));
 };
 
+const postTestArtefactToS3 = async (filename, data) => {
+	try {
+		let params = {
+			Bucket: bucketName,
+			Key: filename,
+			Body: JSON.stringify(data)
+		};
+		console.log('params', params);
+		await s3.putObject(params).promise();
+	} catch (error) {
+		throw error;
+	}
+};
+
 module.exports = {
 	getBodyFromEvent,
-	getTestArtefactFromS3
+	getTestArtefactFromS3,
+	postTestArtefactToS3
 };

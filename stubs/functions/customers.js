@@ -3,7 +3,7 @@ const utils = require('./utils');
 export const getCustomer = async (event, context) => {
 	let response;
 	try {
-		let id = event.pathParameters.customerId;
+		let id = event.pathParameters.id;
 		response = {
 			statusCode: 200,
 			body: JSON.stringify(await utils.getTestArtefactFromS3(`customers/${id}.json`))

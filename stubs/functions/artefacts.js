@@ -1,6 +1,3 @@
-const AWS = require('aws-sdk');
-const s3 = new AWS.S3();
-const bucketName = 'data-driven-test-artefacts';
 const utils = require('./utils');
 
 exports.getTestArtefacts = async (event) => {
@@ -9,17 +6,13 @@ exports.getTestArtefacts = async (event) => {
 		if (event.queryStringParameters && event.queryStringParameters.filepath) {
 			let file = event.queryStringParameters.filepath;
 			console.log('exports.getTestArtefacts -> file', file);
-			let params = {
-				Bucket: bucketName,
-				Key: file
-			};
-			console.log('exports.getTestArtefacts -> params', params);
 
-			const artefact = await s3.getObject(params).promise();
+			const artefact = await utils.getTestArtefactFromS3(file);
+			console.log('exports.getTestArtefacts -> artefact', artefact);
 
 			response = {
 				statusCode: 200,
-				body: JSON.stringify(JSON.parse(artefact.Body.toString('utf-8')))
+				body: JSON.stringify(artefact)
 			};
 			console.log('exports.getTestArtefacts -> response', response);
 		} else {
@@ -56,14 +49,7 @@ exports.uploadTestArtefacts = async (event) => {
 		let data = parsedArtefact.data;
 		console.log('exports.uploadTestArtefacts -> data', data);
 
-		let params = {
-			Bucket: bucketName,
-			Key: filename,
-			Body: JSON.stringify(data)
-		};
-		console.log('exports.uploadTestArtefacts -> params', params);
-
-		await s3.putObject(params).promise();
+		await utils.postTestArtefactToS3(filename, data);
 
 		response = {
 			statusCode: 200,

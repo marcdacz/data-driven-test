@@ -51,13 +51,48 @@ functions:
     handler: functions/customers.getCustomer
     events:
       - http:
-          path: /stubs/customers/{customerId}
+          path: /stubs/customers/{id}
           method: get
           documentation: 
             summary: "Get Customer By Id"
             description: "Get Customer By Id"
-            queryParams:
-              - name: "customerId"
+            pathParams:
+              - name: "id"
                 description: "Customer Id"
-          
+
+  stubs-get-products:
+    handler: functions/products.getProduct
+    events:
+      - http:
+          path: /stubs/products
+          method: get
+          documentation: 
+            summary: "Get Products By Id List"
+            description: "Get Products By Id List"
+            queryParams:
+              - name: "ids"
+                description: "Product Id List"
+              
+  app-get-order:
+    handler: functions/orders.getOrder
+    events:
+      - http:
+          path: /api/orders
+          method: get
+          documentation: 
+            summary: "Get Order By Id"
+            description: "Get Order By Id"
+            queryParams:
+              - name: "id"
+                description: "Order Id"
+                
+  app-post-order:
+    handler: functions/orders.postOrder
+    events:
+      - http:
+          path: /api/order
+          method: post
+          documentation: 
+            summary: "Post Order"
+            description: "Post Order"
 
