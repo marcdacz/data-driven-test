@@ -1,0 +1,34 @@
+{
+  "@context": "http://schema.org/",
+  "@type": "Order",
+  "seller": {
+    "@type": "Organization",
+    "name": "ACME Supplies"
+  },
+  "customer": {
+    "@type": "Person",
+    "customerId": "customer01"
+  },
+  "orderedItem": [
+    {
+      "@type": "OrderItem",
+      "productId": "product01",
+      "orderQuantity": 2,
+      "orderItemStatus": "pending",
+      "orderDelivery": {
+        "@type": "ParcelDelivery",
+        "expectedArrivalFrom": "2021-03-10"
+      }
+    },
+    {
+      "@type": "OrderItem",
+      "productId": "product02",
+      "orderQuantity": 3,
+      "orderItemStatus": "pending",
+      "orderDelivery": {
+        "@type": "ParcelDelivery",
+        "expectedArrivalFrom": "2021-03-10"
+      }
+    }
+  ]
+}

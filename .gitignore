@@ -106,3 +106,5 @@ dist
 # Data Driven Test
 .serverless/
 .webpack/
+tests/data/orders/actual/
+tests/mochawesome-report/
