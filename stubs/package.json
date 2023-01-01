@@ -13,12 +13,12 @@
 		"@babel/core": "^7.11.1",
 		"@babel/preset-env": "^7.11.0",
 		"aws-sdk": "^2.729.0",
-		"babel-loader": "^8.1.0",
+		"babel-loader": "^8.3.0",
 		"corejs": "^1.0.0",
 		"serverless": "^1.78.1",
 		"serverless-aws-documentation": "^1.1.0",
 		"serverless-offline": "^6.5.0",
 		"serverless-webpack": "^5.3.3",
-		"webpack": "^4.44.1"
+		"webpack": "^5.75.0"
 	}
 }
